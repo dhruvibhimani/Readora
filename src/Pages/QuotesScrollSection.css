@@ -1,0 +1,78 @@
+/* Full-screen background with Unsplash image */
+.quote-section {
+  background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 80px 20px;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+}
+
+/* Dark overlay to improve readability */
+.overlay-bg {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 60px 20px;
+  border-radius: 16px;
+}
+
+/* Title styling */
+.main-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #fefefe;
+  font-weight: 700;
+}
+
+/* Responsive container for cards */
+.quotes-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Quote card with transparency and glass effect */
+.quote-card {
+  background: rgba(0, 0, 0, 0.4); /* darker glass effect */
+  backdrop-filter: blur(10px);
+  padding: 25px 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* slightly darker shadow */
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
+  
+
+/* Slide in effect */
+.initial-hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.slide-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Quote text and author */
+.quote-text {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #f8f9fa;
+}
+
+.quote-author {
+  text-align: right;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #d1d5db;
+}
